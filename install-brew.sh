@@ -1,8 +1,11 @@
-#!/usr/bin/env bash
-# install-brew.sh
+echo "clean installing brew"
+if [ -d /home/linuxbrew/ ]; then
+  echo "Removing existing brew installation"
+  yes | NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
+fi
 
-URL_BREW='https://raw.githubusercontent.com/Homebrew/install/master/install'
-
-echo -n '- Installing brew ... '
-echo | /usr/bin/ruby -e "$(curl -fsSL $URL_BREW)" > /dev/null
-if [ $? -eq 0 ]; then echo 'OK'; else echo 'NG'; fi
+echo "Installing brew"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "brew installed, configuring"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/vscode/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

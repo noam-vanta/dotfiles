@@ -1,4 +1,6 @@
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-sh -c install-brew.sh
-brew install --all fzf
-$(brew --prefix)/opt/fzf/install
+#!/bin/bash
+
+sh -c ./install-zsh.sh
+sh -c ./install-brew.sh
+
+sh -c ./install-utils.sh
