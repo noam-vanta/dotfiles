@@ -7,5 +7,4 @@ fi
 /home/linuxbrew/.linuxbrew/bin/brew install fzf
 yes | /home/linuxbrew/.linuxbrew/opt/fzf/install
 
-cp ./backup-zsh-history ~
 cat ./zhistory-backup > $HOME/.zhistory
