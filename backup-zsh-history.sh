@@ -6,7 +6,7 @@ fi
 GITHUB_TOKEN=""; gh auth login
 
 cd /workspaces/dotfiles
-cp $HOME/.zhistory .
+cat $HOME/.zhistory ./zhistory-backup
 git config credential.https://github.com.helper ''
 git config 'credential.https://github.com' '!gh auth git-credential'
 git add .

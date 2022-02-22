@@ -8,4 +8,4 @@ fi
 yes | /home/linuxbrew/.linuxbrew/opt/fzf/install
 
 cp ./backup-zsh-history ~
-cat ./zhistory > $HOME/.zhistory
+cat ./zhistory-backup > $HOME/.zhistory
