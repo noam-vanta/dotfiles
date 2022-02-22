@@ -102,6 +102,12 @@ source $ZSH/oh-my-zsh.sh
 
 HISTFILE=$HOME/.zhistory
 
-alias backuphistory="cat $HOME/.zhistory > /workspaces/dotfiles/.zhistory"
+alias backuphistory="sh ~/backup-zsh-history.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
