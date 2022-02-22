@@ -3,8 +3,7 @@ if [ -d /workspaces/obisidian ]; then
   cd /workspaces && git clone https://github.com/noam-vanta/dotfiles.git;
 fi
 
-export GITHUB_TOKEN=""
-gh auth login
+GITHUB_TOKEN=""; gh auth login
 
 cd /workspaces/dotfiles
 cp $HOME/.zhistory .
