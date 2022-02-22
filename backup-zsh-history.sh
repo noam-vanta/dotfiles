@@ -7,6 +7,8 @@ GITHUB_TOKEN=""; gh auth login
 
 cd /workspaces/dotfiles
 cp $HOME/.zhistory .
+git config credential.https://github.com.helper ''
+git config 'credential.https://github.com' '!gh auth git-credential'
 git add .
 git commit -m "backing up zsh history"
 git push origin main
