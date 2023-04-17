@@ -104,6 +104,7 @@ HISTFILE=$HOME/.zhistory
 
 alias backuphistory="sh ~/backup-zsh-history.sh"
 alias nrb="npm run build"
+alias mgt="make generate-types"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
