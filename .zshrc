@@ -103,8 +103,7 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=$HOME/.zhistory
 
 alias backuphistory="sh ~/backup-zsh-history.sh"
-alias nrb="npm run build"
-alias mgt="make generate-types"
+alias mgt="turbo generate-types"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
