@@ -113,4 +113,8 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PAT
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 
-
+if command -v cursor >/dev/null; then
+  export GIT_EDITOR="cursor --wait"
+elif command -v code >/dev/null; then
+  export GIT_EDITOR="code --wait"
+fi
