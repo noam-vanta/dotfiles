@@ -8,6 +8,7 @@ echo "Setting up GitHub Codespace auto-wake..."
 mkdir -p ~/bin
 
 # Update username in plist and copy to LaunchAgents
+mkdir -p ~/Library/LaunchAgents
 sed "s/YOUR_USERNAME/$USER/g" com.codespace.wake.plist > ~/Library/LaunchAgents/com.codespace.wake.plist
 
 # Copy and make script executable
